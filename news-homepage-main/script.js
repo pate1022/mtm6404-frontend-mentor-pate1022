@@ -1,18 +1,18 @@
 "use strict";
-const openMenu = document.querySelector("#open-menu");
+const open = document.querySelector("#open");
 const ul = document.querySelector("nav > ul");
-const closeMenu = document.querySelector("#close-menu");
+const close = document.querySelector("#close");
 console.log(ul);
 
-openMenu.addEventListener("click", () => {
+open.addEventListener("click", () => {
   console.log("I'm being clicked");
   ul.classList.toggle("show");
-  closeMenu.style.display = "block";
-  openMenu.style.display = "none";
+  close.style.display = "block";
+  open.style.display = "none";
 });
 
-closeMenu.addEventListener("click", () => {
-  closeMenu.style.display = "none";
-  openMenu.style.display = "block";
+close.addEventListener("click", () => {
+  close.style.display = "none";
+  open.style.display = "block";
   ul.classList.toggle("show");
 });
