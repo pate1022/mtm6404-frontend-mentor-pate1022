@@ -7,8 +7,9 @@
 }
 
 html {
-  scroll-behavior: smooth;
   position: relative;
+  scroll-behavior: smooth;
+  
 }
 
 body {
@@ -26,7 +27,7 @@ header {
   padding-top: 20px;
 }
 
-header > .__imageCont {
+header > .images {
   width: 50px;
 }
 
@@ -52,17 +53,16 @@ header > img[src*="icon-menu"] {
   display: none;
 }
 
-/* main section */
 
 main {
+  place-content: center;
+  width: 900px;
+  margin-inline: auto;
   display: grid;
   grid-template-areas:
     "desktop__image desktop__image aside"
     "Left__Article Right__Article aside";
   gap: 1.5rem;
-  place-content: center;
-  width: 900px;
-  margin-inline: auto;
 }
 
 main > aside {
@@ -78,21 +78,21 @@ section > img {
 }
 
 .bg-img {
-  background-image: url(./assets/images/image-web-3-desktop.jpg);
-  background-size: cover;
-  background-position: center;
   height: 250px;
+  background-position: center;
+  background-size: cover;
+  background-image: url(./assets/images/image-web-3-desktop.jpg);
 }
 
 article:has(h1) {
-  grid-area: Left__Article;
-  font-size: 2rem;
   width: 300px;
+  font-size: 2rem;
+  grid-area: Left__Article; 
 }
 
 article:has(p) {
-  grid-area: Right__Article;
   line-height: 25px;
+  grid-area: Right__Article;
 }
 
 button {
@@ -122,8 +122,8 @@ div.border {
 }
 
 .content > h4 {
-  color: white;
   font-size: 18px;
+  color: white;
 }
 
 .content > h4:hover {
@@ -144,21 +144,23 @@ aside > h2 {
   padding-left: 1.5rem;
 }
 
-/* Last section before footer */
+
 section:has(.box) {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  width: 900px;
+  margin-bottom: 60px;
+  margin-inline: auto;
   margin-top: 60px;
   gap: 1.5rem;
-  margin-bottom: 60px;
-  width: 900px;
-  margin-inline: auto;
+ 
+  
 }
 
 section > .box {
+  align-items: center;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  align-items: center;
   gap: 1.5rem;
 }
 
@@ -184,16 +186,17 @@ div.box-img > h4:hover {
 }
 
 div.cbox-img > p {
-  line-height: 20px;
   color: hsl(233, 8%, 79%);
+  line-height: 20px;
+  
 }
 
 /* Footer Section */
 footer {
   position: absolute;
-  bottom: 20px;
-  left: 20px;
   font-size: 11px;
+  left: 20px;
+  bottom: 20px;
 }
 
 footer a {
@@ -212,12 +215,12 @@ footer a {
 
 @media (max-width: 900px) and (orientation: portrait) {
   main {
+    width: 300px;
     grid-template-areas:
       "desktop__image"
       "Left__Article"
       "Right__Article"
       "aside";
-    width: 300px;
   }
 
   .imagebg {
@@ -269,19 +272,21 @@ footer a {
   }
 
   nav ul > li {
+    display: block;
     margin: 50px 0px;
     line-height: 30px;
-    display: block;
+    
   }
 
   nav > ul.show {
-    right: -30%;
     height: 100%;
     width: 100%;
+    right: -30%;
   }
 
   ul > li a {
-    font-size: 20px;
     color: #f3f3f3;
+    font-size: 20px;
+    
   }
 }
