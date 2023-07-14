@@ -1,1 +1,0 @@
-# mtm6404-frontend-mentor-pate1022
